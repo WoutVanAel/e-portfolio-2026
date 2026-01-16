@@ -1,0 +1,16 @@
+<div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow overflow-hidden">
+    <div class="p-8">
+        <div [class]="color() + ' w-16 h-16 rounded-lg flex items-center justify-center mb-6'">
+            <mat-icon class="white-icon">{{ icon() }}</mat-icon>
+        </div>
+        <h2 class="text-2xl mb-4">{{ title() }}</h2>
+        <p class="text-gray-600 mb-6 leading-relaxed">
+            {{ description() }}
+        </p>
+        <a [routerLink]="path()"
+            class="inline-flex items-center gap-2 bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors">
+            Learn More
+            <mat-icon class="ml-2">arrow_forward</mat-icon>
+        </a>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+<nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <a routerLink="/" class="text-xl font-semibold text-gray-800">Wout Van Ael</a>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-8">
+                @for (link of links; track link.path) {
+                <a [routerLink]="link.path" routerLinkActive="bg-blue-600 text-white"
+                [routerLinkActiveOptions]="{exact: link.path === '/'}"
+                    class="px-3 py-2 rounded-md text-sm transition-colors text-gray-700 hover:bg-gray-100">
+                    {{ link.label }}
+                </a>
+                }
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button (click)="toggleMobileMenu()" class="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100">
+                @if (mobileMenuOpen) {
+                <mat-icon>close</mat-icon>
+                }
+                @else {
+                <mat-icon>menu</mat-icon>
+                }
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        @if (mobileMenuOpen) {
+        <div class="md:hidden py-4 space-y-2">
+            @for (link of links; track link.path) {
+            <a [routerLink]="link.path" (click)="toggleMobileMenu()"
+            routerLinkActive="bg-blue-600 text-white"
+            [routerLinkActiveOptions]="{exact: link.path === '/'}"
+            class="block px-3 py-2 rounded-md text-sm transition-colors text-gray-700 hover:bg-gray-100">
+                {{ link.label }}
+            </a>
+            }
+        </div>
+        }
+    </div>
+</nav>
