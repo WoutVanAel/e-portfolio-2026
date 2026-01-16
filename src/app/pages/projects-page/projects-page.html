@@ -1,1 +1,44 @@
-<p>projects-page works!</p>
+<div class="min-h-screen bg-gray-50">
+    <!-- Hero Section -->
+    <div class="bg-gradient-to-r from-purple-600 to-pink-700 text-white py-16 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h1 class="text-4xl md:text-5xl mb-4">Mijn Projecten</h1>
+            <p class="text-xl text-purple-100">Ontdek wat ik gemaakt heb</p>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- Project Cards -->
+        <section>
+            <h2 class="text-3xl mb-8">Alle Projecten</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                @for (project of projects; track project.id) {
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="aspect-video overflow-hidden">
+                        <img [src]="project.image" [alt]="project.title"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-gray-500 mb-2">{{ project.date }}</div>
+                        <h3 class="text-2xl mb-3">{{ project.title }}</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">{{ project.summary }}</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            @for (tag of project.tags; track tag) {
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">
+                                {{ tag }}
+                            </span>
+                            }
+                        </div>
+                        <a [routerLink]="project.path"
+                            class="inline-flex items-center gap-2 text-purple-600 hover:text-purple-800 transition-colors">
+                            Lees Meer
+                            <mat-icon class="text-lg">arrow_forward</mat-icon>
+                        </a>
+                    </div>
+                </div>
+                }
+            </div>
+        </section>
+    </div>
+</div>

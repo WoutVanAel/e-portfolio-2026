@@ -13,9 +13,9 @@ export class Header {
   mobileMenuOpen = false;
   links = [
     { path: '/', label: 'Home' },
-    { path: 'over-mij', label: 'Over mij' },
+    { path: 'about-me', label: 'Over mij' },
     { path: 'stage', label: 'Stage project' },
-    { path: 'projecten', label: 'Projecten' },
+    { path: 'projects', label: 'Projecten' },
     { path: 'contact', label: 'Contact' },
   ];
 

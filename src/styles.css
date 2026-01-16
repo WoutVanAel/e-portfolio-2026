@@ -1,3 +1,56 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "tailwindcss";
+
+/* Change icon colors: since for some reason tailwindcss gets overriden here */
+.white-icon {
+    color: white;
+}
+
+.blue-600-icon {
+    color: var(--color-blue-600);;
+}
+
+.green-600-icon {
+    color: var(--color-green-600);;
+}
+
+.purple-600-icon {
+    color: var(--color-purple-600);;
+}
+
+.orange-600-icon {
+    color: var(--color-orange-600);;
+}
+
+.pink-600-icon {
+    color: var(--color-pink-600);;
+}
+
+.yellow-600-icon {
+    color: var(--color-yellow-600);;
+}
+
+.indigo-600-icon {
+    color: var(--color-indigo-600);;
+}
+
+.gray-600-icon {
+    color: var(--color-gray-600);;
+}
+
+/* BIGGER ICON */
+.custom-large-icon {
+  font-size: 32px !important;
+  width: 32px !important;
+  height: 32px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* SMALLER ICON */
+.custom-small-icon {
+  font-size: 16px !important;
+  padding: 4px;
+}

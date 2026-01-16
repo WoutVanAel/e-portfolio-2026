@@ -6,8 +6,9 @@
             <!-- Desktop Navigation -->
             <div class="hidden md:flex space-x-8">
                 @for (link of links; track link.path) {
+                    <!-- If subpages should also make it active (atm this is better) => exact: link.path === '/' -->
                 <a [routerLink]="link.path" routerLinkActive="bg-blue-600 text-white"
-                [routerLinkActiveOptions]="{exact: link.path === '/'}"
+                [routerLinkActiveOptions]="{exact: true }"
                     class="px-3 py-2 rounded-md text-sm transition-colors text-gray-700 hover:bg-gray-100">
                     {{ link.label }}
                 </a>

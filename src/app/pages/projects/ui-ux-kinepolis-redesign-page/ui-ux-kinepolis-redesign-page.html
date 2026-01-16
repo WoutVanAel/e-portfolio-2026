@@ -1,0 +1,139 @@
+<div class="min-h-screen bg-gray-50">
+
+    <!-- Back button -->
+    <div class="bg-white border-b">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <a routerLink="/projects" class="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900">
+                <mat-icon>arrow_back</mat-icon>
+                Terug naar projecten
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <div class="relative h-[400px] md:h-[500px] overflow-hidden">
+        <img [src]="heroImage" [alt]="title" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+            <div class="max-w-7xl mx-auto px-4 pb-12 w-full">
+                <h1 class="text-4xl md:text-6xl text-white">
+                    {{ title }}
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 py-12">
+
+        <!-- Overview -->
+        <section class="mb-12">
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h2 class="text-3xl mb-6 flex items-center gap-3">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                        <mat-icon class="green-600-icon">construction</mat-icon>
+                    </div>
+                    Projectoverzicht
+                </h2>
+
+                <p class="text-gray-700 leading-relaxed mb-4">
+                </p>
+            </div>
+        </section>
+
+        <!-- My role -->
+        <section class="mb-12">
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h2 class="text-3xl mb-6 flex items-center gap-3">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                        <mat-icon class="blue-600-icon">groups</mat-icon>
+                    </div>
+                    Mijn rol in het team
+                </h2>
+
+                <div class="bg-blue-50 p-6 rounded-lg">
+                    <p class="text-gray-700 mb-4">
+                        Tijdens dit project heb ik de volgende taken uitgevoerd:
+                    </p>
+
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Samen met Ewoud wireframes gemaakt voor de app</li>
+                        <li>Loginpagina ontwikkeld en geïmplementeerd</li>
+                        <li>Instellingenpagina ontworpen en gebouwd</li>
+                        <li>Navigatiemenu opgezet en geïntegreerd</li>
+                        <li>Connectie tussen Unity en Flutter toegevoegd</li>
+                        <li>Modellen in Unity op de kaarten geplaatst</li>
+                        <li>Blazor-applicatie en AR-functionaliteit geïntegreerd</li>
+                        <li>En nog features gemaakt gedurende het project</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section class="mb-12">
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h2 class="text-3xl mb-8 flex items-center gap-3">
+                    <div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center">
+                        <mat-icon class="pink-600-icon">image</mat-icon>
+                    </div>
+                    Afbeeldingen
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    @for (image of gallery; track $index) {
+                    <div
+                        class="relative aspect-video rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                        <img [src]="image" [alt]="title + ' screenshot ' + ($index + 1)"
+                            class="w-full h-full object-cover" />
+                    </div>
+                    }
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools -->
+        <section class="mb-12">
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h2 class="text-3xl mb-6 flex items-center gap-3">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                        <mat-icon class="purple-600-icon">build</mat-icon>
+                    </div>
+                    Tools en Technologieën
+                </h2>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    @for (tool of tools; track tool.name) {
+                    <div class="bg-purple-50 p-4 rounded-lg text-center">
+                        <p class="font-semibold">{{ tool.name }}</p>
+                        <p class="text-sm text-gray-600">{{ tool.type }}</p>
+                    </div>
+                    }
+                </div>
+            </div>
+        </section>
+
+        <!-- Links -->
+        <section>
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h2 class="text-3xl mb-6 flex items-center gap-3">
+                    <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
+                        <mat-icon class="yellow-600-icon">file_present</mat-icon>
+                    </div>
+                    Links & Resources
+                </h2>
+
+                <div class="grid md:grid-cols-3 gap-4">
+                    @for (link of linksAndResources; track link.name) {
+                    <a [href]="link.path" target="_blank" rel="noopener noreferrer"
+                        class="flex items-center gap-3 bg-gray-50 p-4 rounded-lg hover:bg-gray-100">
+                        <mat-icon class="text-gray-600">
+                            {{ link.icon }}
+                        </mat-icon>
+                        <span>{{ link.name }}</span>
+                    </a>
+                    }
+                </div>
+            </div>
+        </section>
+
+    </div>
+</div>

@@ -21,7 +21,7 @@ export class HomePage {
       title: 'Over mij',
       description: 'Ontdek meer over mijn achtergrond, opleiding, vaardigheden en professionele mijlpalen.',
       icon: 'person',
-      path: '/over-mij',
+      path: '/about-me',
       color: 'bg-blue-500',
     },
     {
@@ -33,9 +33,9 @@ export class HomePage {
     },
     {
       title: 'Projecten',
-      description: 'Blader door mijn portfolio van projecten en bekijk wat ik heb gebouwd.',
+      description: 'Blader door mijn portfolio van projecten en bekijk wat ik heb gemaakt.',
       icon: 'folder',
-      path: '/projecten',
+      path: '/projects',
       color: 'bg-purple-500',
     },
     {

@@ -1,1 +1,199 @@
-<p>about-me-page works!</p>
+<div class="min-h-screen bg-gray-50">
+    <!-- Hero Section -->
+    <div class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-16 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h1 class="text-4xl md:text-5xl mb-4">Over mij</h1>
+            <p class="text-xl text-blue-100">Get to know me better</p>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Introduction -->
+        <section class="mb-16">
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h2 class="text-3xl mb-6 flex items-center gap-3">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                        <mat-icon class="blue-600-icon">workspace_premium</mat-icon>
+                    </div>
+                    Introductie
+                </h2>
+                <p class="text-gray-700 leading-relaxed text-lg mb-4">
+                    Hallo! Ik ben Wout Van Ael, 25 jaar en afkomstig uit Geel.
+                    Als afgestudeerde in toegepaste informatica specializatie applicatieontwikkeling met een passie voor
+                    fullstack development,
+                    ben ik klaar om mee te bouwen aan performante en toekomstgerichte applicaties.
+                    Met mijn technische kennis en leergierige ingesteldheid geloof ik dat ik een waardevolle aanvulling
+                    ben voor elk developmentteam.
+                </p>
+                <p class="text-gray-700 leading-relaxed text-lg">
+                    Ik geloof sterk in open code en transparante systemen zonder vendor lock-in.
+                    Door te werken met open standaarden streef ik naar software die niet alleen technisch sterk is, maar
+                    ook duurzaam en betrouwbaar.
+                </p>
+
+                <!-- Download CV -->
+                <div class="pt-3">
+                    <a href="/assets/about-me/CV Wout Van Ael 2026.pdf" download target="_blank"
+                        class="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg">
+                        <mat-icon>description</mat-icon>
+                        <span>Download CV</span>
+                        <mat-icon class="custom-small-icon">download</mat-icon>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education (Opleidingen) -->
+        <section class="mb-16">
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h2 class="text-3xl mb-8 flex items-center gap-3">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                        <mat-icon class="green-600-icon">school</mat-icon>
+                    </div>
+                    Opleidingen
+                </h2>
+                <div class="space-y-6">
+                    @for (edu of education; track edu.degree) {
+                    <div class="border-l-4 border-blue-600 pl-6 py-2">
+                        <div class="flex flex-wrap items-center gap-3 mb-2">
+                            <h3 class="text-xl">{{ edu.degree }}</h3>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
+                                {{ edu.year }}
+                            </span>
+                        </div>
+                        <p class="text-gray-600 mb-1">{{ edu.institution }}</p>
+                        <p class="text-gray-500">{{ edu.description }}</p>
+                    </div>
+                    }
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="mb-16">
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h2 class="text-3xl mb-8 flex items-center gap-3">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                        <mat-icon class="purple-600-icon">trending_up</mat-icon>
+                    </div>
+                    Vaardigheden
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    @for (skill of skills; track skill.name) {
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-gray-700">{{ skill.name }}</span>
+                            <span class="text-gray-500">{{ skill.level }}%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-3">
+                            <div class="bg-gradient-to-r from-blue-500 to-purple-600 h-3 rounded-full transition-all duration-500"
+                                [style.width.%]="skill.level"></div>
+                        </div>
+                    </div>
+                    }
+                </div>
+            </div>
+        </section>
+
+        <!-- SoftSkills Section -->
+        <section class="mb-16">
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h2 class="text-3xl mb-8 flex items-center gap-3">
+                    <div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center">
+                        <mat-icon class="pink-600-icon">group</mat-icon>
+                    </div>
+                    Soft Skills
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    @for (softSkill of softSkills; track softSkill.name) {
+                    <div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-gray-200 rounded-full flex items-center justify-center">
+                                <mat-icon class="custom-small-icon gray-600-icon">{{ softSkill.icon }}</mat-icon>
+                            </div>
+                            <p class="text-gray-700">{{ softSkill.name }}</p>
+                        </div>
+                    </div>
+                    }
+                </div>
+            </div>
+        </section>
+
+        <!-- Milestones -->
+        <section class="mb-16">
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h2 class="text-3xl mb-8 flex items-center gap-3">
+                    <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                        <mat-icon class="orange-600-icon">workspace_premium</mat-icon>
+                    </div>
+                    Mijlpalen
+                </h2>
+                <div class="relative">
+                    <div class="absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-gray-300"></div>
+                    <div class="space-y-8">
+                        @for (milestone of milestones; track $index) {
+                        <div
+                            class="relative flex flex-col md:flex-row {{ $index % 2 === 0 ? 'md:flex-row-reverse' : '' }} items-center gap-8">
+                            <div class="w-full md:w-1/2">
+                                <div class="bg-gray-50 p-6 rounded-lg {{ $index % 2 === 0 ? 'md:text-right' : '' }}">
+                                    <div
+                                        class="inline-block bg-blue-600 text-white px-4 py-1 rounded-full text-sm mb-3">
+                                        {{ milestone.year }}
+                                    </div>
+                                    <h3 class="text-xl mb-2">{{ milestone.title }}</h3>
+                                    <p class="text-gray-600">{{ milestone.description }}</p>
+                                </div>
+                            </div>
+                            <div
+                                class="w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-md absolute left-0 md:left-1/2 transform md:-translate-x-1/2">
+                            </div>
+                            <div class="w-full md:w-1/2"></div>
+                        </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Me Section -->
+        <section>
+            <div class="bg-gradient-to-br from-blue-600 to-purple-700 text-white rounded-lg shadow-md p-8">
+                <h2 class="text-3xl mb-6 flex items-center gap-3">
+                    <mat-icon class="custom-large-icon">mail_outline</mat-icon>
+                    Neem contact via
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="flex items-center gap-3">
+                        <mat-icon class="text-blue-200">mail</mat-icon>
+                        <div>
+                            <p class="text-sm text-blue-200">E-mail</p>
+                            <p class="text-lg"><a href="mailto:woutvanael@gmail.com" class="hover:underline"
+                                    rel="noopener noreferrer">woutvanael@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <mat-icon class="text-blue-200">phone</mat-icon>
+                        <div>
+                            <p class="text-sm text-blue-200">Telefoon</p>
+                            <p class="text-lg"><a href="tel:+32486621199" class="hover:underline"
+                                    rel="noopener noreferrer">+32 486 62 11 99</a></p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <mat-icon class="text-blue-200">location_on</mat-icon>
+                        <div>
+                            <p class="text-sm text-blue-200">Locatie</p>
+                            <p class="text-lg">
+                                <a href="https://www.google.com/maps/search/?api=1&query=Geel,België"
+                                    class="hover:underline" target="_blank" rel="noopener noreferrer">
+                                    Geel, België
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</div>
