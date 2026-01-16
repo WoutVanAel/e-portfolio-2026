@@ -20,26 +20,33 @@ interface LinksAndResources {
   styleUrl: './ui-ux-kinepolis-redesign-page.css',
 })
 export class UiUxKinepolisRedesignPage {
-  title: string = 'Flutter Dieren App';
+  title: string = 'UI UX Kinepolis redesign';
 
-  heroImage: string = 'images/projects/DierenApp-cover-image.png';
+  heroImage: string = 'images/projects/Kinepolis-redesign-cover-image.png';
 
   gallery: string[] = [
-    'images/projects/dieren-app-gallerij/DierenApp-unity-startup.png',
+    'images/projects/kinepolis-redesign-gallerij/knipsel LoFi.png',
+    'images/projects/kinepolis-redesign-gallerij/knipsel HiFi.png',
+    'images/projects/kinepolis-redesign-gallerij/knipsel design system.png',
+    'images/projects/kinepolis-redesign-gallerij/knipsel homepage.png',
+    'images/projects/kinepolis-redesign-gallerij/knipsel kies cinema.png',
+    'images/projects/kinepolis-redesign-gallerij/knipsel kies film.png',
+    'images/projects/kinepolis-redesign-gallerij/knipsel kies tijdslot.png',
+    'images/projects/kinepolis-redesign-gallerij/knipsel login.png',
+    'images/projects/kinepolis-redesign-gallerij/knipsel registreer.png',
+    'images/projects/kinepolis-redesign-gallerij/knipsel kies ticket.png',
+    'images/projects/kinepolis-redesign-gallerij/knipsel kies stoel.png',
+    'images/projects/kinepolis-redesign-gallerij/knipsel email invullen.png',
+    'images/projects/kinepolis-redesign-gallerij/knipsel betaling.png',
+    'images/projects/kinepolis-redesign-gallerij/knipsel download tickets.png',
   ];
 
   tools: Tools[] = [
-    { name: 'Flutter', type: 'Framework' },
-    { name: 'Dart', type: 'Programmeertaal' },
-    { name: 'Unity', type: 'Engine / Framework' },
-    { name: 'Vuforia', type: 'Framework / AR-platform' },
-    { name: 'Augmented Reality (AR)', type: 'Technologie' },
-    { name: 'Visual Studio Code', type: 'IDE / Editor' },
-    { name: 'Git', type: 'Versiebeheersysteem' },
-  ];
+  { name: 'Figma', type: 'Ontwerp / Prototyping' },
+  { name: 'Coolors', type: 'Kleurenpalet / Design' },
+];
 
   linksAndResources: LinksAndResources[] = [
-    { name: 'Project Voorstel en Teamgenoten.pdf', icon: 'description', path: 'assets/dieren-app/Project Voorstel en Teamgenoten.pdf', },
-    { name: 'Kopie van de codebase op GitHub.com', icon: 'code', path: 'https://github.com/WoutVanAel/Flutter-DierenApp' },
+    { name: 'Figma prototype link', icon: 'design_services', path: 'https://www.figma.com/proto/6C3fFAHhznzyVbHEhSomDU/Wireframing---prototyping?node-id=146-918&t=LzbgqhPOturITzaq-1', },
   ];
 }

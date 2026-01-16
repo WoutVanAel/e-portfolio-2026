@@ -25,7 +25,7 @@ export class ProjectsPage {
       title: 'UI UX Kinepolis redesign',
       path: '/projects/ui-ux-kinepolis-redesign',
       summary: 'Een redesign van de desktop website van Kinepolis in Figma',
-      image: 'images/projects/DierenApp-cover-image.png',
+      image: 'images/projects/Kinepolis-redesign-cover-image.png',
       tags: ['Figma', 'UX-UI', 'LoFi', 'HiFi', 'Prototype'],
       date: 'November 2025',
     },
@@ -44,7 +44,7 @@ export class ProjectsPage {
       path: '/projects/maui-waste-sorting-app',
       summary: 'Een app die gebruikmaakt van Azure Computer Vision om gebruikers te helpen hun afval correct te sorteren.',
       image: 'images/projects/MAUI-cover-image.png',
-      tags: ['Azure AI', '.NET MAUI', 'Mobile'],
+      tags: ['Azure AI Custom Vision', '.NET MAUI', 'Mobile'],
       date: 'Oktober 2024',
     },
   ];

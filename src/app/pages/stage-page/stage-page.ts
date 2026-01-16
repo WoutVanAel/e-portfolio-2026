@@ -62,7 +62,7 @@ export class StagePage {
   ];
 
   documents: Document[] = [
-    { name: 'Plan van aanpak Wout Van Ael V2.pdf', type: 'PDF', path: 'assets/stage/Plan van aanpak Wout Van Ael V2.pdf' },
+    { name: 'Plan van aanpak Wout Van Ael.pdf', type: 'PDF', path: 'assets/stage/Plan van aanpak Wout Van Ael V2.pdf' },
     { name: 'Gheys - Realisatiedocument - Wout Van Ael - BCC - aanmeld- en administratieprogramma.pdf', type: 'PDF', path: 'assets/stage/Gheys - Realisatiedocument - Wout Van Ael - BCC - aanmeld- en administratieprogramma.pdf' },
     { name: 'Reflectie - Wout Van Ael - BBC - aanmeld- en administratie.pdf', type: 'PDF', path: 'assets/stage/Reflectie - Wout Van Ael - BBC - aanmeld- en administratie.pdf' },
   ];

@@ -35,6 +35,10 @@
                 </h2>
 
                 <p class="text-gray-700 leading-relaxed mb-4">
+                    Als team, bestaande uit Florim, Toon, Nathan en ik, heb ik bijgedragen aan het herontwerp van de
+                    website van Kinepolis vanuit een UI/UX-perspectief.
+                    We hebben de belangrijkste user flows in Figma geprototyped, met speciale aandacht voor
+                    toegankelijkheid (Accessibility) en een gebruiksvriendelijke interface.
                 </p>
             </div>
         </section>
@@ -51,18 +55,17 @@
 
                 <div class="bg-blue-50 p-6 rounded-lg">
                     <p class="text-gray-700 mb-4">
-                        Tijdens dit project heb ik de volgende taken uitgevoerd:
+                        In dit project werkten we als team samen aan alle onderdelen van de app. Mijn specifieke
+                        bijdragen waren onder andere:
                     </p>
 
                     <ul class="list-disc list-inside text-gray-700 space-y-2">
-                        <li>Samen met Ewoud wireframes gemaakt voor de app</li>
-                        <li>Loginpagina ontwikkeld en geïmplementeerd</li>
-                        <li>Instellingenpagina ontworpen en gebouwd</li>
-                        <li>Navigatiemenu opgezet en geïntegreerd</li>
-                        <li>Connectie tussen Unity en Flutter toegevoegd</li>
-                        <li>Modellen in Unity op de kaarten geplaatst</li>
-                        <li>Blazor-applicatie en AR-functionaliteit geïntegreerd</li>
-                        <li>En nog features gemaakt gedurende het project</li>
+                        <li>User testing uitgevoerd en feedback verwerkt</li>
+                        <li>Moodboard ontworpen voor de visuele stijl</li>
+                        <li>Login- en registreerscherm geprototyped in Figma</li>
+                        <li>Betaalscherm geprototyped in Figma</li>
+                        <li>Feedback toegepast</li>
+                        <li>Variatie aan andere dingen gedurende het project</li>
                     </ul>
                 </div>
             </div>
@@ -81,9 +84,9 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     @for (image of gallery; track $index) {
                     <div
-                        class="relative aspect-video rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                        class="relative aspect-[9/16] rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
                         <img [src]="image" [alt]="title + ' screenshot ' + ($index + 1)"
-                            class="w-full h-full object-cover" />
+                            class="w-full h-full object-contain bg-gray-100" />
                     </div>
                     }
                 </div>
